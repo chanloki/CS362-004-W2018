@@ -1,1 +1,1 @@
-Lok I CHAN, chanlok
+This is my assignment-1 submission!
