@@ -645,7 +645,7 @@ int getCost(int cardNumber)
 
 void adventurerAction(struct gameState *state, int currentPlayer, int *temphand)
 {
-  int drawntreasure = 0;
+  int drawntreasure = 1;  // bug
   int z = 0;// this is the counter for the temp hand
   int cardDrawn;
 
@@ -698,7 +698,7 @@ void smithyAction(int currentPlayer, struct gameState *state, int handPos)
 {
   int i;
   //+3 Cards
-  for (i = 0; i < 3; i++)
+  for (i = 0; i < 2; i++)  // bug
   {
     drawCard(currentPlayer, state);
   }
@@ -713,7 +713,7 @@ void villageAction(int currentPlayer, struct gameState *state, int handPos)
   drawCard(currentPlayer, state);
   
   //+2 Actions
-  state->numActions = state->numActions + 2;
+  state->numActions = state->numActions + 1;  // bug
   
   //discard played card from hand
   discardCard(handPos, currentPlayer, state, 0); 
@@ -725,7 +725,7 @@ void great_hallAction(int currentPlayer, struct gameState *state, int handPos)
   drawCard(currentPlayer, state);
   
   //+1 Actions
-  state->numActions++;
+  state->numActions = state->numActions + 2;  // bug
   
   //discard card from hand
   discardCard(handPos, currentPlayer, state, 0); 
