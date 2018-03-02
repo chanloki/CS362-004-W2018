@@ -1,0 +1,14 @@
+Bug 1:
+smithy card found at cardtest1.c
+
+This unit test is to test the the effect of smithy card action by testing the hand size, deck size, and number of coins. 
+
+The bug is at line 679 in dominion.c file. It should allow the player to draw 3 cards; however, the code allow the player to draw 4 cards instead.
+
+
+Bug 2:
+adventurer card found at randomtestadventurer.c
+
+This random testing generates different number of players, hand count, and deck count for the game, and to check whether the hand count and deck count are correct.
+
+The bug is at line 666 in dominion.c file. I found that the hand count and deck count are different than what it is expected.
